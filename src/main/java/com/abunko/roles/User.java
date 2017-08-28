@@ -1,32 +1,26 @@
 package com.abunko.roles;
 
-import com.abunko.Actor;
-import com.abunko.Comment;
-import com.abunko.Movie;
-import com.abunko.Movies;
+import com.abunko.*;
 import com.abunko.interfaces.AuthorizedRole;
 
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * Created by Andrew on 19.07.2017.
  */
 public class User implements AuthorizedRole {
-    private static int count;
-    private final long userID ;
+
+    private final UUID userID ;
     private final String name;
-    private Map<Movie,Integer> filmsThatWatched;
-    private Map<Movie, Comment> commentMap;
-    private List<Movie> faworiteMovies;
-    private List<Actor> faworiteActors;
+    private Movies faworiteMovies;
+    private Actors faworiteActors;
     private final Movies movies;
 
-    public User(String name, Map<Movie, Integer> filmsThatWatched, List<Movie> faworiteMovies, List<Actor> faworiteActors, Movies movies) {
-        this.userID = count;
-        count++;
+    public User(String name, Movies faworiteMovies, Actors faworiteActors, Movies movies) {
+        this.userID = UUID.randomUUID();
         this.name = name;
-        this.filmsThatWatched = filmsThatWatched;
         this.faworiteMovies = faworiteMovies;
         this.faworiteActors = faworiteActors;
         this.movies = movies;
@@ -36,23 +30,19 @@ public class User implements AuthorizedRole {
 
     }
 
-    public void addComment(Comment comment) {
-
-    }
-
-    public void deleteComment(Comment comment) {
-
-    }
-
     public void getRecomendation() {
 
     }
 
-    public static int getCount() {
-        return count;
+    public void addFaworiteMovies(Movie movie){
+        faworiteMovies.getMovies().add(movie);
     }
 
-    public long getUserID() {
+    public void addFaworiteActors(Actor actor){
+        faworiteActors.getListActors().add(actor);
+    }
+
+    public UUID getUserID() {
         return userID;
     }
 
@@ -60,19 +50,11 @@ public class User implements AuthorizedRole {
         return name;
     }
 
-    public Map<Movie, Integer> getFilmsThatWatched() {
-        return filmsThatWatched;
-    }
-
-    public Map<Movie, Comment> getCommentMap() {
-        return commentMap;
-    }
-
-    public List<Movie> getFaworiteMovies() {
+    public Movies getFaworiteMovies() {
         return faworiteMovies;
     }
 
-    public List<Actor> getFaworiteActors() {
+    public Actors getFaworiteActors() {
         return faworiteActors;
     }
 

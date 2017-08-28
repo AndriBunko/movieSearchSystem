@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="337.00961538461536" y="246.0">com.abunko.Actors</node>
+    <node x="522.2115384615385" y="448.0">com.abunko.Movie</node>
+    <node x="405.08653846153845" y="706.0">com.abunko.Movies</node>
+    <node x="621.9615384615385" y="192.0">com.abunko.enams.Genre</node>
+    <node x="464.0" y="1063.0">com.abunko.roles.Guest</node>
+    <node x="177.375" y="526.0">com.abunko.interfaces.Role</node>
+    <node x="119.0" y="795.0">com.abunko.interfaces.AuthorizedRole</node>
+    <node x="0.0" y="986.0">com.abunko.roles.User</node>
+    <node x="337.50961538461536" y="0.0">com.abunko.Actor</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.abunko.roles.User" target="com.abunko.interfaces.AuthorizedRole">
+      <point x="0.0" y="-126.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.abunko.Movies" target="com.abunko.Actors">
+      <point x="-86.75" y="-115.0" />
+      <point x="492.46153846153845" y="423.0" />
+      <point x="446.50961538461536" y="423.0" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="com.abunko.Movies" target="com.abunko.Movie">
+      <point x="86.75" y="-115.0" />
+      <point x="0.0" y="104.0" />
+    </edge>
+    <edge source="com.abunko.Actors" target="com.abunko.Actor">
+      <point x="0.0" y="-49.0" />
+      <point x="0.0" y="71.0" />
+    </edge>
+    <edge source="com.abunko.roles.User" target="com.abunko.Actors">
+      <point x="-148.0" y="-126.0" />
+      <point x="74.0" y="966.0" />
+      <point x="108.5" y="966.0" />
+      <point x="108.5" y="423.0" />
+      <point x="373.50961538461536" y="423.0" />
+      <point x="-73.0" y="49.0" />
+    </edge>
+    <edge source="com.abunko.Movie" target="com.abunko.Actors">
+      <point x="-71.25" y="-104.0" />
+      <point x="593.4615384615385" y="423.0" />
+      <point x="519.5096153846154" y="423.0" />
+      <point x="73.0" y="49.0" />
+    </edge>
+    <edge source="com.abunko.roles.Guest" target="com.abunko.Movies">
+      <point x="47.5" y="-49.0" />
+      <point x="606.5" y="966.0" />
+      <point x="665.3365384615385" y="966.0" />
+      <point x="86.75" y="115.0" />
+    </edge>
+    <edge source="com.abunko.interfaces.AuthorizedRole" target="com.abunko.interfaces.Role">
+      <point x="0.0" y="-26.0" />
+      <point x="222.0" y="681.0" />
+      <point x="228.125" y="681.0" />
+      <point x="-50.75" y="26.0" />
+    </edge>
+    <edge source="com.abunko.Movie" target="com.abunko.enams.Genre">
+      <point x="71.25" y="-104.0" />
+      <point x="0.0" y="103.0" />
+    </edge>
+    <edge source="com.abunko.roles.Guest" target="com.abunko.interfaces.Role">
+      <point x="-47.5" y="-49.0" />
+      <point x="511.5" y="956.0" />
+      <point x="394.58653846153845" y="956.0" />
+      <point x="394.58653846153845" y="681.0" />
+      <point x="329.625" y="681.0" />
+      <point x="50.75" y="26.0" />
+    </edge>
+    <edge source="com.abunko.roles.User" target="com.abunko.Movies">
+      <point x="148.0" y="-126.0" />
+      <point x="370.0" y="966.0" />
+      <point x="491.83653846153845" y="966.0" />
+      <point x="-86.75" y="115.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="585.5" y="451.5" />
+  <SelectedNodes>
+    <node>com.abunko.Movies</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
